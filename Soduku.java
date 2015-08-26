@@ -43,21 +43,22 @@ public class Soduku {
 
 		int counter = 0;
 
-		// Check horizontal
 		for (int i = 0; i < SIZE; i ++) {
+			// Check horizontal
 			for (int j = 0; j < SIZE; j ++) {
 				numbers[j] = matrix[i][j] ;
 			}
-
+			
 			if (!check_numbers (numbers)) { return false ; }
-
+			
+			// Check vertical
 			for (int j = 0; j < SIZE; j ++) {
 				numbers[j] = matrix[j][i] ;
 			}
 
 			if (!check_numbers (numbers)) { return false ; }
-
-			if (i%3 == 0) {
+			
+			if (i%3 == 0) { // Check the grid. Only perform this for every first cell in a grid
 				for (int j = 0; j < SIZE; j += 3) {
 					counter = 0 ;
 
