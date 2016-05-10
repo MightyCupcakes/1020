@@ -2,7 +2,7 @@ import java.util.* ;
 
 public class MagicSquare {
 
-    private static int[][] matrix ;
+    private static int[][] matrix ; //hello
     private static int size ;
 
     public static void main (String args[]) {
